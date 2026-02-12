@@ -1,0 +1,10 @@
+services:
+  nuxtcommerce:
+    image: node:20
+    container_name: nuxtcommerce_app
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
